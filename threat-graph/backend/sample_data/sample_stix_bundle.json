@@ -1,0 +1,58 @@
+{
+  "type": "bundle",
+  "id": "bundle--9f2b6f2e-36e1-4c4a-9b0a-6a2a5b7f3d11",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "id": "indicator--1f8b4c9e-1111-4c4a-8aa1-000000000001",
+      "created": "2026-11-20T00:00:00.000Z",
+      "modified": "2026-11-20T00:00:00.000Z",
+      "name": "Suspicious source IP",
+      "pattern": "[ipv4-addr:value = '192.0.2.41']",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity", "suspicious"],
+      "confidence": 85,
+      "description": "Observed credential stuffing source in sample intelligence feed."
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1f8b4c9e-2222-4c4a-8aa1-000000000002",
+      "created": "2026-11-20T00:00:00.000Z",
+      "modified": "2026-11-20T00:00:00.000Z",
+      "name": "Credential harvesting domain",
+      "pattern": "[domain-name:value = 'secure-verify.example']",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity"],
+      "confidence": 90,
+      "description": "Reported credential harvesting infrastructure."
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1f8b4c9e-3333-4c4a-8aa1-000000000003",
+      "created": "2026-11-20T00:00:00.000Z",
+      "modified": "2026-11-20T00:00:00.000Z",
+      "name": "Downloader file hash",
+      "pattern": "[file:hashes.'SHA-256' = '275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f']",
+      "pattern_type": "stix",
+      "labels": ["malicious-activity"],
+      "confidence": 95,
+      "description": "Downloader sample recovered from sandbox analysis."
+    },
+    {
+      "type": "observed-data",
+      "id": "observed-data--3c9a1111-4444-4c4a-8aa1-000000000004",
+      "created": "2026-11-20T00:00:00.000Z",
+      "modified": "2026-11-20T00:00:00.000Z",
+      "first_observed": "2026-11-20T08:00:00.000Z",
+      "last_observed": "2026-11-20T08:05:00.000Z",
+      "number_observed": 12,
+      "objects": {
+        "0": {"type": "ipv4-addr", "value": "192.0.2.41"},
+        "1": {"type": "ipv4-addr", "value": "203.0.113.19"},
+        "2": {"type": "domain-name", "value": "cdn-update.example"},
+        "3": {"type": "url", "value": "https://cdn-update.example/payload"}
+      }
+    }
+  ]
+}

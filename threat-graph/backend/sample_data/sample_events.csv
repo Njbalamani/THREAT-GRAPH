@@ -1,0 +1,6 @@
+id,timestamp,event_type,source_ip,destination_ip,domain,file_hash,url,severity,title,description
+evt-2001,2026-11-21T07:15:00Z,malware_execution,198.51.100.23,10.0.0.31,update-service.example,9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08,,high,Sandbox execution,Executable spawned a shell during analysis.
+evt-2002,2026-11-21T07:42:00Z,dns_query,192.0.2.41,,update-service.example,,high,Infrastructure reuse,Known source resolved the same domain.
+evt-2003,2026-11-21T08:05:00Z,phishing_email,203.0.113.44,,secure-verify.example,,medium,Phishing lure,Message contained a credential harvesting link.
+evt-2004,2026-11-21T08:30:00Z,beacon,198.51.100.23,203.0.113.19,update-service.example,,critical,Beacon confirmed,Regular callback interval detected.
+evt-2005,2026-11-21T09:10:00Z,file_download,192.0.2.41,198.51.100.23,update-service.example,9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08,high,Hash reused,Same file hash observed from two infrastructure sources.

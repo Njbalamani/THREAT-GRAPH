@@ -1,0 +1,128 @@
+[
+  {
+    "id": "evt-1001",
+    "timestamp": "2026-11-20T08:12:00Z",
+    "event_type": "authentication_failure",
+    "source_ip": "192.0.2.41",
+    "destination_ip": "10.0.0.12",
+    "domain": "login-portal.example",
+    "severity": "high",
+    "title": "Repeated failed administrator logins",
+    "description": "Credential stuffing pattern observed against the administrator portal."
+  },
+  {
+    "id": "evt-1002",
+    "timestamp": "2026-11-20T08:18:00Z",
+    "event_type": "dns_query",
+    "source_ip": "192.0.2.41",
+    "domain": "login-portal.example",
+    "severity": "high",
+    "title": "Suspicious domain lookup",
+    "description": "Repeated lookups after failed authentication burst."
+  },
+  {
+    "id": "evt-1003",
+    "timestamp": "2026-11-20T09:04:00Z",
+    "event_type": "malware_download",
+    "source_ip": "192.0.2.41",
+    "destination_ip": "198.51.100.77",
+    "domain": "cdn-update.example",
+    "file_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "severity": "critical",
+    "title": "Suspicious executable retrieved",
+    "description": "File hash observed during sandbox detonation of a downloader sample."
+  },
+  {
+    "id": "evt-1004",
+    "timestamp": "2026-11-20T09:31:00Z",
+    "event_type": "beacon",
+    "source_ip": "198.51.100.77",
+    "destination_ip": "203.0.113.19",
+    "domain": "cdn-update.example",
+    "severity": "critical",
+    "title": "Periodic beacon activity",
+    "description": "Regular outbound callbacks with matching JA3 fingerprint."
+  },
+  {
+    "id": "evt-1005",
+    "timestamp": "2026-11-20T10:02:00Z",
+    "event_type": "phishing_click",
+    "source_ip": "203.0.113.19",
+    "domain": "secure-verify.example",
+    "url": "https://secure-verify.example/account/verify",
+    "severity": "high",
+    "title": "Credential harvesting page visited",
+    "description": "User clicked a link from a reported phishing email."
+  },
+  {
+    "id": "evt-1006",
+    "timestamp": "2026-11-20T10:20:00Z",
+    "event_type": "dns_query",
+    "source_ip": "192.0.2.41",
+    "domain": "secure-verify.example",
+    "severity": "high",
+    "title": "Shared phishing infrastructure lookup",
+    "description": "Same source IP contacted a second suspicious domain."
+  },
+  {
+    "id": "evt-1007",
+    "timestamp": "2026-11-20T11:11:00Z",
+    "event_type": "port_scan",
+    "source_ip": "198.51.100.77",
+    "destination_ip": "10.0.0.20",
+    "severity": "medium",
+    "title": "Horizontal port scan",
+    "description": "Sequential ports observed from a single external source."
+  },
+  {
+    "id": "evt-1008",
+    "timestamp": "2026-11-20T11:45:00Z",
+    "event_type": "email_attachment",
+    "source_ip": "203.0.113.19",
+    "file_hash": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+    "severity": "high",
+    "title": "Macro document attachment",
+    "description": "Attachment triggered a script when opened in a sandbox."
+  },
+  {
+    "id": "evt-1009",
+    "timestamp": "2026-11-20T12:10:00Z",
+    "event_type": "dns_query",
+    "source_ip": "198.51.100.77",
+    "domain": "cdn-update.example",
+    "severity": "high",
+    "title": "Repeated CDN domain lookup",
+    "description": "Repeated resolution from multiple infrastructure sources."
+  },
+  {
+    "id": "evt-1010",
+    "timestamp": "2026-11-20T12:22:00Z",
+    "event_type": "authentication_success",
+    "source_ip": "192.0.2.41",
+    "destination_ip": "10.0.0.12",
+    "severity": "low",
+    "title": "Routine administrator login",
+    "description": "Successful login after a password rotation."
+  },
+  {
+    "id": "evt-1011",
+    "timestamp": "2026-11-20T13:05:00Z",
+    "event_type": "dns_query",
+    "source_ip": "203.0.113.19",
+    "domain": "cdn-update.example",
+    "severity": "high",
+    "title": "Cross-domain infrastructure contact",
+    "description": "Source contacted infrastructure shared with earlier events."
+  },
+  {
+    "id": "evt-1012",
+    "timestamp": "2026-11-20T14:40:00Z",
+    "event_type": "policy_alert",
+    "source_ip": "10.0.0.12",
+    "destination_ip": "198.51.100.77",
+    "domain": "login-portal.example",
+    "severity": "medium",
+    "title": "Internal host contacted external infrastructure",
+    "description": "Policy alert for outbound communication to a monitored endpoint."
+  }
+]

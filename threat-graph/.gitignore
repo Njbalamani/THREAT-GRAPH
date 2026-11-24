@@ -1,0 +1,15 @@
+.env
+*.log
+*.db
+.DS_Store
+node_modules/
+dist/
+backend/.venv/
+backend/storage/
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/**/__pycache__/
+backend/**/*.py[cod]
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
